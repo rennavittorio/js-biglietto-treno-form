@@ -68,7 +68,9 @@ undoTicketElement.addEventListener('click', function () {
     ageClusterElement = document.querySelector('.ageCluster');
     ageClusterElement.selectedIndex = 0; //da capire meglio
 
-    
+    userNameOutput.innerHTML = '-';
+    ticketTypeOutput.innerHTML = '-';
+    ticketPriceOutput.innerHTML = '-';
 
 })
 
