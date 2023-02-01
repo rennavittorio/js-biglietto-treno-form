@@ -11,31 +11,31 @@
 <body>
     
 
-    <main class="main">
+    <main class="main pt-2 pb-5">
 
-        <div class="container input__container my-5 p-5">
-            <h1 class="mb-3 text-center">
-                Calcola il prezzo del tuo biglietto
-            </h1>
+        <h1 class="text-center">
+            Calcola il prezzo del tuo biglietto
+        </h1>
+        <div class="container input__container p-5">
 
             <!-- form -->
             <div class="row g-3 text-center">
                 <!-- input richiesti -->
                 <div class="col-4">
                     <div class="input__item">
-                        Inserisci il tuo nome e cognome
-                        <input class="form-control mt-1 fullName" type="text" name="firstName" value="Vittorio" placeholder="Nome e cognome">
+                        Nome e cognome
+                        <input class="form-control mt-1 fullName" type="text" name="firstName" value="" placeholder="Nome e cognome">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="input__item">
-                        Inserisci la distanza desiderata (in km)
-                        <input class="form-control mt-1 distanceRoute" type="number" name="firstName" value="123.456" placeholder="Distanza desiderata">
+                        Km da percorrere
+                        <input class="form-control mt-1 distanceRoute" type="number" name="firstName" value="" placeholder="Distanza desiderata">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="input__item">
-                        Seleziona il tuo cluster d'età
+                        Fascia d'età
                         <select class="form-control mt-1 ageCluster" type="text" name="firstName" value="" placeholder="Seleziona...">
                             <option value="not-selected" selected>-- Scegli uno --</option>
                             <option value="under18">Minorenne</option>
@@ -60,18 +60,58 @@
             <!-- form end -->
         </div>
 
+        <h1 class="mt-5 text-center">
+            Il tuo biglietto
+        </h1>
         <div class="container output__container p-5">
-            <h1 class="mb-3">
-                Il tuo biglietto
-            </h1>
-
+            <h3>
+                Dettagli passeggero
+            </h3>
             <!-- output -->
             <div class="row">
-                <div class="col-4">
-                    dati passeggero
+                <div class="col-4 info__user p-3">
+                    <h5 class="info__title">
+                        Nome passeggero
+                    </h5>
+                    <p class="info__detail" id="userNameOutput">
+                        insert
+                    </p>
                 </div>
-                <div class="col-8">
-                    dati tratta
+                <div class="col-8 info__track p-3">
+                    <div class="row">
+                        <div class="col d-flex flex-column justify-content-between">
+                            <h5 class="info__title">
+                                Offerta
+                            </h5>
+                            <p class="info__detail" id="ticketType">
+                                insert
+                            </p>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-between">
+                            <h5 class="info__title">
+                                Carrozza
+                            </h5>
+                            <p class="info__detail" id="carriageNum">
+                                5
+                            </p>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-between">
+                            <h5 class="info__title">
+                                Codice CP
+                            </h5>
+                            <p class="info__detail" id="ticketCode">
+                                92911
+                            </p>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-between">
+                            <h5 class="info__title">
+                                Costo biglietto
+                            </h5>
+                            <p class="info__detail" id="ticketPriceOutput">
+                                insert
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- output end -->

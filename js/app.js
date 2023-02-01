@@ -44,7 +44,6 @@ generateTicketElement.addEventListener('click', function(){
     console.log('prezzo scontato', ticketPrice);
 })
 
-
     
 
 

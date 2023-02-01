@@ -1,7 +1,31 @@
-.input__container {
-    background-color: lightgreen;
+
+.main {
+    background-color: #b91450;
+    color: #fff;
 }
 
+.input__container,
 .output__container {
-    background-color: lightsalmon;
+    background-color: #fff;
+    color: #000;
+}
+
+.input__container {
+    border: 2px solid #808080;
+    border-radius: 20px;
+}
+
+.input__item {
+    color: #b91450;
+    font-weight: 700;
+}
+
+.info__user {
+    background-color: #808080;
+}
+
+.info__track {
+    border: 2px solid;
+    border-color: #808080 transparent;
+    background-color: #fff;
 }
