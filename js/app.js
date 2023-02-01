@@ -58,6 +58,20 @@ generateTicketElement.addEventListener('click', function(){
     ticketPriceOutput.innerHTML = ticketPrice;
 })
 
+undoTicketElement.addEventListener('click', function () {
+    fullNameElement = document.querySelector('.fullName');
+    fullNameElement.value = '';
+
+    distanceRouteElement = document.querySelector('.distanceRoute');
+    distanceRouteElement.value = '';
+
+    ageClusterElement = document.querySelector('.ageCluster');
+    ageClusterElement.selectedIndex = 0; //da capire meglio
+
+    
+
+})
+
     
 
 
