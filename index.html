@@ -14,30 +14,48 @@
     <main class="main">
 
         <div class="container input__container my-5 p-5">
-            <h1 class="mb-3">
+            <h1 class="mb-3 text-center">
                 Calcola il prezzo del tuo biglietto
             </h1>
 
             <!-- form -->
-            <div class="row gy-3">
+            <div class="row g-3 text-center">
                 <!-- input richiesti -->
                 <div class="col-4">
-                    input richiesti
+                    <div class="input__item">
+                        Inserisci il tuo nome e cognome
+                        <input class="form-control mt-1 fullName" type="text" name="firstName" value="Vittorio" placeholder="Nome e cognome">
+                    </div>
                 </div>
                 <div class="col-4">
-                    input richiesti
+                    <div class="input__item">
+                        Inserisci la distanza desiderata (in km)
+                        <input class="form-control mt-1 distanceRoute" type="number" name="firstName" value="123.456" placeholder="Distanza desiderata">
+                    </div>
                 </div>
                 <div class="col-4">
-                    input richiesti
+                    <div class="input__item">
+                        Seleziona il tuo cluster d'età
+                        <select class="form-control mt-1 ageCluster" type="text" name="firstName" value="" placeholder="Seleziona...">
+                            <option value="not-selected" selected>-- Scegli uno --</option>
+                            <option value="under18">Minorenne</option>
+                            <option value="adult">Adulto</option>
+                            <option value="over65">Anziano</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- buttons -->
-                <div class="col-6">
-                    button
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary generateTicket">
+                        Genera
+                    </button>
+                    <button type="button" class="btn btn-danger undoTicket">
+                        Annulla
+                    </button>
                 </div>
-                <div class="col-6">
-                    button
-                </div>
+                <!-- <div class="col-6">
+                </div> -->
             </div>
             <!-- form end -->
         </div>
