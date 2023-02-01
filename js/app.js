@@ -1,5 +1,5 @@
 // console.log('works!');
-//settare variabili necessarie
+//dichiaro variabili necessarie
 let fullNameElement, distanceRouteElement, ageClusterElement;
 const priceAtKm = 0.21;
 let ticketPrice;
@@ -13,6 +13,7 @@ let ticketPriceOutput = document.getElementById('ticketPriceOutput');
 
 //richiamare bottone generator
 const generateTicketElement = document.querySelector('.generateTicket');
+const undoTicketElement = document.querySelector('.undoTicket');
 // console.log(generateTicketElement);
 
 //al click del bottone:
@@ -24,7 +25,6 @@ generateTicketElement.addEventListener('click', function(){
     distanceRouteElement = document.querySelector('.distanceRoute').value;
     distanceRouteElement = parseFloat(distanceRouteElement);
     ageClusterElement = document.querySelector('.ageCluster').value;
-    // console.log('dati utente sono', fullNameElement, distanceRouteElement, ageClusterElement);
 
     //calcolare prezzo biglietto base (km * 0.21)
     ticketPrice = distanceRouteElement * priceAtKm;
