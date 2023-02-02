@@ -8,12 +8,14 @@ let ticketPrice;
 let userNameOutput = document.getElementById('userNameOutput');
 let ticketTypeOutput = document.getElementById('ticketTypeOutput');
 let ticketPriceOutput = document.getElementById('ticketPriceOutput');
+let carriageNum = document.getElementById('carriageNum');
+let ticketCode = document.getElementById('ticketCode');
 
 //richiamo elementi a comparsa-scomparsa
 let yourTicketHeader = document.getElementById('your-ticket__header');
 let yourTicketBody = document.getElementById('your-ticket__body');
 // console.log(userNameOutput, ticketTypeOutput, ticketPriceOutput);
-console.log(yourTicketHeader, yourTicketBody);
+// console.log(yourTicketHeader, yourTicketBody);
 
 
 //richiamare bottone generator
@@ -58,7 +60,30 @@ generateTicketElement.addEventListener('click', function(){
     //Mostrare dati inseriti e prezzo finale a utente
     ticketPrice = parseFloat(ticketPrice).toFixed(2);
     ticketPrice = parseFloat(ticketPrice);
-    console.log('prezzo scontato', ticketPrice);
+    console.log('prezzo scontato', typeof ticketPrice);
+
+    //generare un numero random per carrozza, in base al prezzo
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+    
+    //per controllare se ticketPrice è un numero
+    let validTicketPrice = isNaN(ticketPrice);
+    console.log(validTicketPrice);
+
+    //se numero, calcolo carrozza, altrimenti no
+    if (validTicketPrice === false) { //da verificare
+        if (ticketPrice > 50) {
+            const rndInt = randomIntFromInterval(1, 3);
+            carriageNum.innerHTML = rndInt;
+            // console.log('rnd car num', rndInt);
+        } else {
+            const rndInt = randomIntFromInterval(4, 7);
+            carriageNum.innerHTML = rndInt;
+            // console.log('rnd car num', rndInt);
+        }
+    }
+    // console.log('rnd car num', rndInt)
 
     ticketPriceOutput.innerHTML = ticketPrice + ' €';
 
@@ -76,10 +101,10 @@ undoTicketElement.addEventListener('click', function () {
     ageClusterElement = document.querySelector('.ageCluster');
     ageClusterElement.selectedIndex = 0; //da capire meglio
 
-    //non serve più, perché scompare il biglietto
-    // userNameOutput.innerHTML = '-';
-    // ticketTypeOutput.innerHTML = '-';
-    // ticketPriceOutput.innerHTML = '-';
+    userNameOutput.innerHTML = '-';
+    ticketTypeOutput.innerHTML = '-';
+    carriageNum.innerHTML = '-'
+    ticketPriceOutput.innerHTML = '-';
 
     yourTicketHeader.classList.replace('d-block', 'd-none');
     yourTicketBody.classList.replace('d-block', 'd-none');
