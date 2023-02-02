@@ -8,7 +8,12 @@ let ticketPrice;
 let userNameOutput = document.getElementById('userNameOutput');
 let ticketTypeOutput = document.getElementById('ticketTypeOutput');
 let ticketPriceOutput = document.getElementById('ticketPriceOutput');
+
+//richiamo elementi a comparsa-scomparsa
+let yourTicketHeader = document.getElementById('your-ticket__header');
+let yourTicketBody = document.getElementById('your-ticket__body');
 // console.log(userNameOutput, ticketTypeOutput, ticketPriceOutput);
+console.log(yourTicketHeader, yourTicketBody);
 
 
 //richiamare bottone generator
@@ -55,7 +60,10 @@ generateTicketElement.addEventListener('click', function(){
     ticketPrice = parseFloat(ticketPrice);
     console.log('prezzo scontato', ticketPrice);
 
-    ticketPriceOutput.innerHTML = ticketPrice;
+    ticketPriceOutput.innerHTML = ticketPrice + ' €';
+
+    yourTicketHeader.classList.replace('d-none', 'd-block');
+    yourTicketBody.classList.replace('d-none', 'd-block');
 })
 
 undoTicketElement.addEventListener('click', function () {
@@ -68,9 +76,13 @@ undoTicketElement.addEventListener('click', function () {
     ageClusterElement = document.querySelector('.ageCluster');
     ageClusterElement.selectedIndex = 0; //da capire meglio
 
-    userNameOutput.innerHTML = '-';
-    ticketTypeOutput.innerHTML = '-';
-    ticketPriceOutput.innerHTML = '-';
+    //non serve più, perché scompare il biglietto
+    // userNameOutput.innerHTML = '-';
+    // ticketTypeOutput.innerHTML = '-';
+    // ticketPriceOutput.innerHTML = '-';
+
+    yourTicketHeader.classList.replace('d-block', 'd-none');
+    yourTicketBody.classList.replace('d-block', 'd-none');
 
 })
 
